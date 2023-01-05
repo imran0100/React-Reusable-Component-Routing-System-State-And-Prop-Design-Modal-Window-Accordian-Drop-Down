@@ -1,5 +1,10 @@
 import React from "react";
+import ButtonPage from "./pages/ButtonPage";
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <div>
+      <ButtonPage />
+    </div>
+  );
 }
