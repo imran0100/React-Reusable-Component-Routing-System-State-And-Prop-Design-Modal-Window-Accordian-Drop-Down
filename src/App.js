@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "./components/Dropdown";
 
 export default function App() {
+  const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  };
+
   const options = [
     { label: "red", value: "red" },
     { label: "green", value: "green" },
@@ -10,7 +16,11 @@ export default function App() {
 
   return (
     <div>
-      <Dropdown options={options} />
+      <Dropdown
+        options={options}
+        selection={selection}
+        onSelect={handleSelect}
+      />
     </div>
   );
 }
